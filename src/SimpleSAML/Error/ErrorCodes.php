@@ -50,6 +50,7 @@ class ErrorCodes
     public const UNKNOWNCERT = 'UNKNOWNCERT';
     public const USERABORTED = 'USERABORTED';
     public const WRONGUSERPASS = 'WRONGUSERPASS';
+    public const RECAPTCHAFAILED = 'RECAPTCHAFAILED';
 
     public const KEY_TITLE = 'title';
     public const KEY_DESCRIPTION = 'descr';
@@ -100,6 +101,7 @@ class ErrorCodes
             self::UNKNOWNCERT => Translate::noop('Unknown certificate'),
             self::USERABORTED => Translate::noop('Authentication aborted'),
             self::WRONGUSERPASS => Translate::noop('Incorrect username or password'),
+            self::RECAPTCHAFAILED => Translate::noop('Captcha verification is failed'),
         ];
     }
 
@@ -260,6 +262,9 @@ class ErrorCodes
             self::WRONGUSERPASS => Translate::noop("" .
                 "Either no user with the given username could be found, or the password " .
                 "you gave was wrong. Please check the username and try again."),
+            self::RECAPTCHAFAILED => Translate::noop("" .
+                "Google Recaptcha verification is failed." .
+                "Please try again."),
         ];
     }
 
