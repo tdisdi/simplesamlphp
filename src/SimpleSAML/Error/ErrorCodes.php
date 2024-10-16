@@ -51,10 +51,6 @@ class ErrorCodes
     public const USERABORTED = 'USERABORTED';
     public const WRONGUSERPASS = 'WRONGUSERPASS';
     public const RECAPTCHAFAILED = 'RECAPTCHAFAILED';
-    public const DeviceCookieLimiter = 'DeviceCookieLimiter';
-    public const IpLimiter = 'IpLimiter';
-    public const PasswordStuffingLimiter = 'PasswordStuffingLimiter';
-    public const UsernameLimiter = 'UsernameLimiter';
     public const KEY_TITLE = 'title';
     public const KEY_DESCRIPTION = 'descr';
 
@@ -105,10 +101,6 @@ class ErrorCodes
             self::USERABORTED => Translate::noop('Authentication aborted'),
             self::WRONGUSERPASS => Translate::noop('Incorrect username or password'),
             self::RECAPTCHAFAILED => Translate::noop('Captcha verification is failed'),
-            self::DeviceCookieLimiter => Translate::noop('DeviceCookieLimiter blocked'),
-            self::IpLimiter => Translate::noop('IpLimiter blocked'),
-            self::PasswordStuffingLimiter => Translate::noop('PasswordStuffingLimiter blocked'),
-            self::UsernameLimiter => Translate::noop('UsernameLimiter blocked'),
         ];
     }
 
@@ -270,10 +262,6 @@ class ErrorCodes
                 "Either no user with the given username could be found, or the password " .
                 "you gave was wrong. Please check the username and try again."),
             self::RECAPTCHAFAILED => Translate::noop("Google Recaptcha verification is failed. Please try again."),
-            self::DeviceCookieLimiter => Translate::noop('DeviceCookieLimiter blocked your access'),
-            self::IpLimiter => Translate::noop('IpLimiter blocked your access'),
-            self::PasswordStuffingLimiter => Translate::noop('PasswordStuffingLimiter blocked your access'),
-            self::UsernameLimiter => Translate::noop('UsernameLimiter blocked your access'),
         ];
     }
 
