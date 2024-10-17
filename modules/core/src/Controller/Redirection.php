@@ -38,7 +38,7 @@ class Redirection
      */
     public function __construct(
         protected Configuration $config,
-        protected Session $session
+        protected Session $session,
     ) {
         $this->cryptoUtils = new Utils\Crypto();
     }
@@ -59,7 +59,7 @@ class Redirection
         if ($redirId !== false) {
             $postId = $redirId;
         } elseif ($redirInfo !== false) {
-            $encData = base64_decode($redirInfo);
+            $encData = base64_decode($redirInfo, true);
 
             if (empty($encData)) {
                 throw new Error\BadRequest('Invalid RedirInfo data.');
