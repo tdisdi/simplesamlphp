@@ -82,7 +82,9 @@
         "symfony/var-exporter": "^6.4",
         "symfony/yaml": "^6.4",
         "twig/intl-extra": "^3.7",
-        "twig/twig": "^3.5"
+        "twig/twig": "^3.5",
+        "google/recaptcha": "^1.3",
+        "cirrusidentity/simplesamlphp-module-ratelimit": "3.0.0"
     },
     "require-dev": {
         "ext-curl": "*",
