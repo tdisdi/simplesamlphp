@@ -61,7 +61,7 @@
         "gettext/translator": "^1.1",
         "phpmailer/phpmailer": "^6.8",
         "psr/log": "^3.0",
-        "simplesamlphp/assert": "^1.1",
+        "simplesamlphp/assert": "1.1.9",
         "simplesamlphp/composer-module-installer": "^1.3",
         "simplesamlphp/saml2": "^4.6",
         "simplesamlphp/simplesamlphp-assets-base": "~2.2",
@@ -82,7 +82,10 @@
         "symfony/var-exporter": "^6.4",
         "symfony/yaml": "^6.4",
         "twig/intl-extra": "^3.7",
-        "twig/twig": "^3.5"
+        "twig/twig": "^3.5",
+        "simplesamlphp/xml-common": "1.16.0",
+        "cirrusidentity/simplesamlphp-module-ratelimit": "^3.0.0",
+        "google/recaptcha": "^1.3"
     },
     "require-dev": {
         "ext-curl": "*",
