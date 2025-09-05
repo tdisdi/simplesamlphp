@@ -47,3 +47,64 @@ $metadata['https://legacy.example.edu'] = [
      */
     //'signature.algorithm' => 'http://www.w3.org/2000/09/xmldsig#rsa-sha1',
 ];
+
+$metadata['http://portal.tdisdi.loc/laravel_saml_connector'] = [
+    'entityid' => 'http://portal.tdisdi.loc/laravel_saml_connector',
+    'description' => [
+        'en-US' => 'miniOrange',
+    ],
+    'OrganizationName' => [
+        'en-US' => 'miniOrange',
+    ],
+    'name' => [
+        'en-US' => 'miniOrange',
+    ],
+    'OrganizationDisplayName' => [
+        'en-US' => 'miniOrange',
+    ],
+    'url' => [
+        'en-US' => 'https://www.miniorange.com',
+    ],
+    'OrganizationURL' => [
+        'en-US' => 'https://www.miniorange.com',
+    ],
+    'contacts' => [
+        [
+            'contactType' => 'technical',
+            'givenName' => 'miniOrange',
+            'emailAddress' => [
+                'info@xecurify.com',
+            ],
+        ],
+        [
+            'contactType' => 'support',
+            'givenName' => 'miniOrange',
+            'emailAddress' => [
+                'info@xecurify.com',
+            ],
+        ],
+    ],
+    'metadata-set' => 'saml20-sp-remote',
+    'AssertionConsumerService' => [
+        [
+            'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+            'Location' => 'http://portal.tdisdi.loc/saml/acs',
+            'index' => 1,
+        ],
+    ],
+    'SingleLogoutService' =>
+        [
+            0 =>
+                [
+                    'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
+                    'Location' => 'http://portal.tdisdi.loc/saml/sls',
+                ],
+
+        ],
+    'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
+    'simplesaml.nameidattribute' => 'emailAddress',
+    'simplesaml.attributes' => true,
+    'validate.authnrequest' => false,
+    'saml20.sign.assertion' => true,
+	'validate.logout' => false
+];
